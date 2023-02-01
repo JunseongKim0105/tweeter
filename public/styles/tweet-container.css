@@ -1,0 +1,14 @@
+#tweet-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tweet-container {
+  border: 4px solid #545149;
+  width: 100%;
+}
+
+.tweet-container:hover {
+  border: 4px solid #545149;
+}
