@@ -16,3 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+![screenshot description][docs/Screenshot 2023-02-02 at 6.29.28 PM.png]
+![screenshot description]
+![screenshot description]
+![screenshot description]
