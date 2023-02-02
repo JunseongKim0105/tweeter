@@ -17,6 +17,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 
+## Screenshot
 ![screenshot description](https://github.com/JunseongKim0105/tweeter/blob/master/docs/Screenshot%202023-02-02%20at%206.29.28%20PM.png)]
 ![screenshot description][https://github.com/JunseongKim0105/tweeter/blob/master/docs/Screenshot%202023-02-02%20at%206.29.10%20PM.png]
 ![screenshot description][https://github.com/JunseongKim0105/tweeter/blob/master/docs/Screenshot%202023-02-02%20at%206.27.55%20PM.png]
