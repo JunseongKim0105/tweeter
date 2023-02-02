@@ -1,30 +1,57 @@
-.navbar {
-  height: 120px;
-  background-color: #4056a1;
-  color: #ffffff;
-  width: 100vw;
-  padding: 1.5em;
+#navbar {
+  /* border: 2px dotted red; */
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 120px;
+  width: 100%;
 
   position: fixed;
+
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+
+  opacity: 0.95;
+  color: #ffffff;
+  transition: top 0.3s;
 }
 
-.navbar > span {
-  font-family: 'Bungee';
-  font-size: 1.5em;
-  align-self: center;
-}
-.new-tweet {
+.nav-bar-right {
+  /* border: 2px dotted red; */
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
 }
-i.arrow-icon {
-  font-size: 15px;
-  color: red;
+
+.arrow-button {
+  /* border: 2px dotted black; */
+  background: none;
+  border: none;
+}
+
+@keyframes updown {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+#i-arrow {
+  /* border: 2px dotted red; */
   display: flex;
-  align-self: center;
+  justify-content: center;
+  color: #ff0000;
+  padding-top: 15px;
+
+  animation: updown 2.5s linear infinite;
+}
+
+#i-arrow:hover {
+  transition-duration: 0.4s;
+  color: #b4e5ff;
+  filter: drop-shadow(0px 10px 3px black);
+  animation: updown 0.4s linear infinite;
 }

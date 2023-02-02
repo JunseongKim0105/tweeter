@@ -1,20 +1,22 @@
-header {
-  padding-top: 120px;
-  height: 520px;
-  width: 100%;
+header.profile {
+  /* border: 2px dotted black; */
   display: flex;
   flex-direction: column;
-  background-color: #147800;
-  background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
-}
-.avatar {
-  display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 400px;
+
+  background-color: #b4e5ff;
+  background-image: url('../images/bright-squares.png');
 }
 
-.name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* #profile-avatar {
+  /* border: 2px dotted black; */
+/* } */
+*/ #profile-name {
+  /* border: 2px dotted black; */
+  color: white;
+  font-weight: bolder;
+  font-size: 1.5em;
 }

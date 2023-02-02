@@ -1,17 +1,13 @@
 $(document).ready(function () {
-  // --- our code goes here ---
-  $('textarea').val('');
-});
+  // real-time page counter feedback for character limit
+  $('#tweet-text').on('input', function (event) {
+    // ES5 function convention to use 'this' inside function scope
+    let text = event.target.value;
+    let remChars = 140 - text.length;
 
-$(document).on('input', 'textarea', function () {
-  let currentCount = $(this).val().length;
-  console.log(currentCount);
-  let counter = $(this).siblings('.tweet-footer').children('.counter');
-  $(counter).html(140 - currentCount);
-
-  if (currentCount > 140) {
-    counter.css('color', 'red');
-  } else {
-    counter.css('color', '#545149');
-  }
+    // search tree up, then down to select counter element
+    const counter = $(this).parentsUntil('.new-tweet').find('.counter');
+    counter.html(remChars);
+    counter.toggleClass('over-limit', remChars < 0);
+  });
 });

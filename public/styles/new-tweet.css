@@ -1,36 +1,51 @@
-.new-tweet {
+#error-message {
+  border: 4px solid #c51244;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-.tweet-text {
-  width: 100vh;
-  resize: none;
-  border: none;
-  height: 50px;
-  margin-bottom: 7px;
-  padding: 10px;
-  background-color: transparent;
-  border-bottom: 3px solid cadetblue;
+  text-align: center;
+  color: #c51244;
+  background: #ffe0e8;
+  font-weight: bolder;
+  padding: 5px;
 }
 
-.tweet-footer {
+/* left for styling testing */
+/* .new-tweet {
+  /* border: 2px dotted black; */
+/* } */
+*/ #tweet-text {
+  width: 100%;
+  height: 2.5em;
+  margin-top: 2em;
+  border: none;
+  border-bottom: 4px solid #000000;
+  background: none;
+  font-weight: bold;
+}
+
+.new-tweet-footer {
+  /* border: 2px dotted black; */
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  font-family: 'Bungee', cursive;
 }
 
-.add-new-tweet-button {
-  border: none;
+.tweet-button {
   background-color: #4056a1;
-  color: white;
-  padding: 0.3rem;
-  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.8em;
+
+  transition-duration: 0.4s;
+  border-radius: 10px;
+  text-shadow: 3px 2px 1px #9daef5;
+  box-shadow: 6px 5px 24px #666666;
+  padding: 10px;
 }
-.counter {
-  font-family: 'Bungee', sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #545149;
+
+.tweet-button:hover {
+  background: #b4e5ff;
+}
+
+.over-limit {
+  color: red;
 }

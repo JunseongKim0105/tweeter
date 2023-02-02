@@ -30,9 +30,11 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="styles/nav.css" />
     <link rel="stylesheet" href="styles/new-tweet.css" />
-    <link rel="stylesheet" href="styles/tweet-container.css" />
+    <link rel="stylesheet" href="styles/article-tweet.css" />
+    <link rel="stylesheet" href="styles/media.css">
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -40,69 +42,57 @@
       type="text/javascript"
       src="/scripts/composer-char-counter.js"
     ></script>
+    <script type="text/javascript" src="/scripts/composer.js"></script>
   </head>
 
   <body>
+
     <!-- Top nav bar (fixed) -->
-    <nav class="navbar">
-      <span>tweeter</span>
-      <div class="new-tweet">
-        <span><strong>Write</strong> a new tweet</span>
-        <i class="fa-sharp fa-solid fa-angles-down"></i>
+    <nav id='navbar'>
+      <div id="logo">tweeter</div>
+      <div class='nav-bar-right'>
+        <span class="nav-text"><strong>Write</strong> a new tweet</span>
+        <button class="arrow-button" type="submit">
+          <span id='i-arrow' class="fas fa-angle-double-down"></span>
+        </button>
       </div>
     </nav>
-    <header>
-      <div class="avatar">
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div class="name">
-        <h2>Your Name</h2>
-      </div>
-    </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea
-            class="tweet-text"
-            name="text"
-            id="tweet-text"
-            placeholder="What are you humming about"
-          ></textarea>
-          <div class="tweet-footer">
-            <button class="add-new-tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-        <section id="tweet-section">
-          <article class="tweet">
-            <header class="tweet-header">
-              <div class="tweet-avatar">
-                <span
-                  ><img src="https://i.imgur.com/nlhLi3I.png" alt=""
-                /></span>
-                <span>Rhoda Jacobs</span>
-              </div>
-              <div class="tweet-accountName">@MrsJacobs</div>
-            </header>
-            <div class="tweet-body">
-              <div>Hello World!</div>
+    <div class="large-container">
+
+      <!-- Profile section -->
+      <header class="profile">
+        <img id="profile-avatar"src="/images/profile-hex.png"> 
+        <div id="profile-name">Jun Kim</div>
+      </header>
+
+      <!-- Main content section for tweets -->
+      <main class="main-container">
+
+        <!-- Compose new tweet -->
+        <section class="new-tweet">
+          <div id="error-message"></div>
+          <form method="POST" action="/tweets">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div class="new-tweet-footer">
+              <button class="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
-            <footer class="tweet-bottom">
-              <span>10 days ago</span>
-              <div class="tweet-icons">
-                <i class="fa-solid fa-flag"></i>
-                <i class="fa-solid fa-retweet"></i>
-                <i class="fa-solid fa-heart"></i>
-              </div>
-            </footer>
-          </article>
+          </form>
         </section>
-      </section>
-    </main>
+
+        <!-- Existing tweets -->
+        <section id="tweets-container"></section>
+
+      </main>
+
+      <!-- Scroll-to-top button -->
+      <button class="arrow-button" type="submit">
+        <span id='i-arrow-up' class="fas fa-angle-double-down"></span>
+      </button>
+
+    </div>
+    <footer id="main-footer">Tweeter©<footer>
   </body>
+
 </html>

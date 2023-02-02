@@ -1,5 +1,5 @@
 /*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+* http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
@@ -17,17 +17,66 @@ html {
  */
 
 body {
+  /* border: 2px dotted blue; */
   color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
+  background-color: #f8ead7;
+  font-size: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+#logo {
+  font-family: 'Bungee';
+}
+
+.large-container {
+  /* header, .main-container, .footer */
+  /* border: 2px dotted red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  /* .new-tweet, #tweets-container */
+  /* border: 2px dotted black; */
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 90%;
+}
+
+.new-tweet-footer {
+  font-family: 'Bungee';
+}
+
+/* scroll-to top button */
+#i-arrow-up {
+  transform: rotateZ(180deg);
+  background: #ff0000;
+  color: white;
+  padding: 30px;
+  border-radius: 50%;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+
+  opacity: 0.9;
+}
+
+#i-arrow-up:hover {
+  transition-duration: 0.4s;
+  box-shadow: 6px 5px 24px #666666;
+}
+
+#main-footer {
+  /* border: 2px dotted black; */
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  padding: 1em;
+  align-self: center;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main {
-  width: 90%;
-  background-color: inherit;
-  margin: 0 auto;
-}
